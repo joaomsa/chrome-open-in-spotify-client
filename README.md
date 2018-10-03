@@ -17,7 +17,7 @@ The way the extension works is:
 6. Redirect to that URL
 7. Close the tab that was opening the URL if it was a newly opened tab
 
-Available in the [Google Chrome web store][store-url]
+Available in the [Google Chrome web store][store-url] and [Firefox AMO][amo-url]
 
 # Changes
 ## 1.3
@@ -29,8 +29,9 @@ Available in the [Google Chrome web store][store-url]
 ## 1.2
 * Opens links to user's playlists properly. Thanks for the bug report Robin H.
 
-[store-url]: https://chrome.google.com/webstore/detail/open-in-spotify-client/okkdbmdhpgmajopdpmflkldkemcldnjd
 [original-repo-url]: https://github.com/gaqzi/chrome-open-in-spotify-client
+[store-url]: https://chrome.google.com/webstore/detail/open-in-spotify-client/okkdbmdhpgmajopdpmflkldkemcldnjd
+[amo-url]: https://addons.mozilla.org/en-US/firefox/addon/open-in-spotify-desktop/
 
 window by IconfactoryTeam from the Noun Project
 spotify logo from page source in www.spotify.com
