@@ -1,3 +1,5 @@
+*This is a Firefox port of the [chrome extension][original-repo-url]*
+
 Open Spotify link in client
 ===========================
 
@@ -28,3 +30,7 @@ Available in the [Google Chrome web store][store-url]
 * Opens links to user's playlists properly. Thanks for the bug report Robin H.
 
 [store-url]: https://chrome.google.com/webstore/detail/open-in-spotify-client/okkdbmdhpgmajopdpmflkldkemcldnjd
+[original-repo-url]: https://github.com/gaqzi/chrome-open-in-spotify-client
+
+window by IconfactoryTeam from the Noun Project
+spotify logo from page source in www.spotify.com
