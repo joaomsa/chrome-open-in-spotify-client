@@ -10,16 +10,37 @@ and then close the newly opened browser window.
 The way the extension works is:
 
 1. If the URL visited is open.spotify.com or play.spotify.com then
-2. If the URL contains `/embed/` then don't do anything
-3. Remove the FQDN part and the first slash and
-4. Replace those with spotify: and
-5. Replace the remaining slashes (/) with colons (:)
-6. Redirect to that URL
-7. Close the tab that was opening the URL if it was a newly opened tab
+2. Don't do anything if the URL contains any of the following, else
+   - `/embed/`: Embedded playlists
+   - `/embed?`: Legacy embed playlist format
+   - `/log/`: Requests to Spotify's analytics
+3. Remove the protocol and domain part together with the first slash and
+4. Replace those with `spotify:` and
+5. Replace the remaining slashes (`/`) with colons (`:`) and
+6. Redirect to that URL and
+7. Close the tab that opened the URL if it was a newly opened tab
 
 Available in the [Google Chrome web store][store-url] and [Firefox AMO][amo-url]
 
 # Changes
+## 1.4.1.1 (Firefox only)
+* Workaround for closing newly opened tab before the new external protocol
+  confirmation prompt introduced in v84 can be answered. You can set
+  `security.external_protocol_requires_permission` to `false` in about:config
+  to stop the confirmation prompt from showing
+
+## 1.4.1
+* Purely a technical implementation release, switched from using webpack,
+  in the unreleased 1.4, to relying on [native ES6 modules in the extension.][es6-modules-extension]
+
+[es6-modules-extension]: https://medium.com/front-end-weekly/es6-modules-in-chrome-extensions-an-introduction-313b3fce955b
+
+## 1.4
+* Don't touch analytics/log links and legacy embed links. 
+  Thanks [@claui] for the PR.
+
+[@claui]: https://github.com/claui 
+
 ## 1.3
 * Don't touch embedded links, so that websites that embed a playlist
   can do so without having Spotify trying to open the link automatically.

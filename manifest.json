@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Open in Spotify desktop client",
+    "description": "Instead of opening open.spotify.com links in the browser they will always be opened in Spotify",
+    "version": "1.4.1.1",
+    "icons": {
+        "48": "open-in-client.svg",
+        "96": "open-in-client.svg"
+    },
+    "permissions": [
+        "tabs",
+        "webRequest",
+        "webRequestBlocking",
+        "*://open.spotify.com/",
+        "*://play.spotify.com/"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "background": {
+        "page": "chrome-background.html"
+    }
+}
